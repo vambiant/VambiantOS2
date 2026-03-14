@@ -1,0 +1,28 @@
+{
+  "name": "@vambiant/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./session": "./src/session.ts",
+    "./middleware": "./src/middleware.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-auth": "^1.2.3",
+    "jose": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "^22.10.7",
+    "@vambiant/config": "workspace:*",
+    "@vambiant/db": "workspace:*",
+    "typescript": "^5.7.3"
+  }
+}
